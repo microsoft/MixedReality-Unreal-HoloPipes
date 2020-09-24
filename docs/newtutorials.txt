@@ -1,0 +1,84 @@
+Tutorials
+
+1) First Level
+Welcome to HoloPipes!
+Say “Move Game” if you’d like to move the gameboard. Press or say “Next” to continue.
+Advance: Saying “Move Game” (which shows the move game tutorial), or Next
+
+2) First Level
+“Move Game” and other tools are available in the menu. To open the menu, raise your hand, fingers open, and palm facing you.
+Advance: Open the menu 
+
+3) First Level
+This is a pipe start. You can't move it.
+Arrow: pointing to pipe start
+Advance: Next
+
+4) First Level
+This is a pipe end. You can't move it either.
+Arrow: pointing to pipe end
+Advance: Next
+
+5) First Level
+This one can be moved. Pinch the piece between your thumb and forefinger to pick it up.
+Arrow: pointing at piece to pick up
+Advance: Pick up piece
+
+6) First Level
+Simply release a piece to place it where you think it belongs.
+Arrow: pointing to opening in pipe
+Advance: Pipe correctly placed
+
+7) First Level
+This piece is turned the wrong direction, but that’s okay. Go ahead, pick it up.
+Arrow: pointing to pipe
+Advance: Pick up piece
+
+8) First Level
+Pieces turn as you carry them. Turn your hand to correctly place this piece.
+Arrow: pointing to opening in pipe
+Advance: Pipe correctly placed
+
+9) First Level
+There's more than one way to rotate a piece. Hover here to see what happens.
+Arrow: pointing just outside cursor's edge
+Advance: Rotation handle appears
+
+10) First Level
+That's a rotation handle. Move your hand around the piece to see diferent rotation handles.
+Arrow: pointing at piece
+Advance: Different Rotation Handle appears
+
+111) First Level
+Pinch and drag a rotate handle to rotate this piece until it connects to its neighbor.
+Arrow: ponting at piece
+Advance: Piece properly rotated
+
+12) First Level
+This is your toolbox. It holds all the pieces you haven't placed yet. Go ahead, drag out a piece.
+Arrow: pointing at toolbox
+Advance: Piece pulled from toolbox
+
+13) First Level
+To finish any level, connect all pipe starts to their matching ends. Put any extra pieces back in the toolbox.
+Complete this tutorial by finishing the level.
+Advance: Finish Level
+
+14) Second Level (Simple Level)
+Use everything you've learned to complete this level.
+Advance: Finish Level
+
+15) First Junction Level
+There's a junction in your toolbox! That means one of the pipes will have more than one end.
+Arrow: pointing at toolbox
+Advance: Finish Level
+
+16) First cage level
+These metal boxes block pipes. You'll have to find a way around them.
+Arrow: pointing at cage
+Advance: Finish Level
+
+17) First locked piece
+This piece is locked in place. Your pipe will have to pass through the piece where it is.
+Arrow: pointing at locked piece
+Advance: Finish level

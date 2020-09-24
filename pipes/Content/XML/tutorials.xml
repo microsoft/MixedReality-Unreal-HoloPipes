@@ -1,0 +1,387 @@
+﻿<?xml version="1.0"?>
+<tutorials>
+  <tutorial level="1" size="3" generate="false">
+    <page coordinate="-1,0,2" offset="0,0,5">
+      <text>
+        <line>Welcome to HoloPipes!</line>
+        <line>Say “Move Game” if you'd like to move the game board; otherwise press or say "Next" to continue.</line>
+      </text>
+      <disabled>
+        <feature>drag</feature>
+        <feature>rotate</feature>
+        <feature>toolbox</feature>
+      </disabled>
+      <pipes>
+        <pipe type="start" class="1" coordinate="0,-2,-1" fixed="true">
+          <connection>right</connection>
+        </pipe>
+        <pipe type="end" class="1" coordinate="0,2,1" fixed="true">
+          <connection>left</connection>
+        </pipe>
+      </pipes>
+      <goals>
+        <goal type="next"/>
+        <goal type="move"/>
+      </goals>
+    </page>
+    <page coordinate="-1,0,2" offset="0,0,5">
+      <text>
+        <line>“Move Game” is always available in the menu. Open the menu now by looking at the palm of your hand, fingers extended.</line>
+      </text>
+      <disabled>
+        <feature>drag</feature>
+        <feature>rotate</feature>
+        <feature>toolbox</feature>
+      </disabled>
+      <goals>
+        <goal type="menu"/>
+      </goals>
+    </page>
+    <page coordinate="-1,0,2" offset="0,0,5">
+      <text>
+        <line>Feel free to explore the menu now if you'd like, or at any time in the future. Each tool explains what it does the first time you use it.</line>
+      </text>
+      <disabled>
+        <feature>drag</feature>
+        <feature>rotate</feature>
+        <feature>toolbox</feature>
+      </disabled>
+      <goals>
+        <goal type="next"/>
+      </goals>
+    </page>
+    <page coordinate="-1,0,2" offset="0,0,5">
+      <text>
+        <line>This is a pipe start. You can't move it.</line>
+      </text>
+      <disabled>
+        <feature>drag</feature>
+        <feature>rotate</feature>
+        <feature>toolbox</feature>
+      </disabled>
+      <goals>
+        <goal type="next"/>
+      </goals>
+      <arrows>
+        <arrow coordinate="0,-2,0"/>
+      </arrows>
+    </page>
+    <page coordinate="-1,0,3" offset="0,0,5">
+      <text>
+        <line>This is a pipe end. You can't move those either.</line>
+      </text>
+      <disabled>
+        <feature>drag</feature>
+        <feature>rotate</feature>
+        <feature>toolbox</feature>
+      </disabled>
+      <goals>
+        <goal type="next"/>
+      </goals>
+      <arrows>
+        <arrow coordinate="0,2,2"/>
+      </arrows>
+    </page>
+    <page coordinate="-1,0,2" offset="0,0,5">
+      <text>
+        <line>This piece can be moved. Pinch it between your thumb and forefinger to pick it up.</line>
+      </text>
+      <disabled>
+        <feature>rotate</feature>
+        <feature>toolbox</feature>
+      </disabled>
+      <pipes>
+        <pipe type="straight" class="0" coordinate="-1,-1,-1" fixed="false">
+          <connection>left</connection>
+          <connection>right</connection>
+        </pipe>
+      </pipes>
+      <goals>
+        <goal type="grab">
+          <pipe coordinate="-1,-1,-1"/>
+        </goal>
+      </goals>
+      <arrows>
+        <arrow coordinate="-1,-1,0"/>
+      </arrows>
+    </page>
+    <page coordinate="-1,0,2" offset="0,0,6">
+      <text>
+        <line>Now drop the piece so it connects to the pipe start.</line>
+      </text>
+      <disabled>
+        <feature>rotate</feature>
+        <feature>toolbox</feature>
+      </disabled>
+      <goals>
+        <goal type="place">
+          <pipe type="straight" coordinate="0,-1,-1">
+            <connection>left</connection>
+            <connection>right</connection>
+          </pipe>
+        </goal>
+      </goals>
+      <arrows>
+        <arrow coordinate="0,-1,0"/>
+      </arrows>
+    </page>
+    <page coordinate="-1,0,2" offset="0,0,5">
+      <text>
+        <line>This piece needs to rotate before it can connect to the corner, but that's okay. Go ahead and pick it up.</line>
+      </text>
+      <disabled>
+        <feature>rotate</feature>
+        <feature>toolbox</feature>
+      </disabled>
+      <pipes>
+        <pipe type="corner" class="1" coordinate="0,0,-1" fixed="false">
+          <connection>left</connection>
+          <connection>top</connection>
+        </pipe>
+        <pipe type="straight" class="0" coordinate="-1,0,0" fixed="false">
+          <connection>left</connection>
+          <connection>right</connection>
+        </pipe>
+      </pipes>
+      <goals>
+        <goal type="grab">
+          <pipe coordinate="-1,0,0"/>
+        </goal>
+      </goals>
+      <arrows>
+        <arrow coordinate="-1,0,1"/>
+      </arrows>
+    </page>
+    <page coordinate="-1,0,2" offset="0,0,5">
+      <text>
+        <line>Pieces turn as you carry them. Turn this piece so it runs vertically (up and down) and connect it to the corner.</line>
+      </text>
+      <disabled>
+        <feature>rotate</feature>
+        <feature>toolbox</feature>
+      </disabled>
+      <goals>
+        <goal type="place">
+          <pipe type="straight" coordinate="0,0,0">
+            <connection>top</connection>
+            <connection>bottom</connection>
+          </pipe>
+        </goal>
+      </goals>
+      <arrows>
+        <arrow coordinate="0,0,1"/>
+      </arrows>
+    </page>
+    <page coordinate="-1,0,2" offset="0,0,6">
+      <text>
+        <line>But what if it's too hard to turn your hand the right way?</line>
+      </text>
+      <disabled>
+        <feature>rotate</feature>
+        <feature>drag</feature>
+        <feature>toolbox</feature>
+      </disabled>
+      <goals>
+        <goal type="next" />
+      </goals>
+    </page>
+    <page coordinate="-1,0,3" offset="0,0,6">
+      <text>
+        <line>Hover here, just outside the piece's cursor, to see what happens.</line>
+      </text>
+      <disabled>
+        <feature>drag</feature>
+        <feature>toolbox</feature>
+      </disabled>
+      <pipes>
+        <pipe type="corner" class="0" coordinate="-1,0,1" fixed="false">
+          <connection>left</connection>
+          <connection>top</connection>
+        </pipe>
+      </pipes>
+      <goals>
+        <goal type="handle" mintime="1">
+          <pipe coordinate="-1,0,1" />
+        </goal>
+      </goals>
+      <arrows>
+        <arrow coordinate="-1,1,2"/>
+      </arrows>
+    </page>
+    <page coordinate="-1,0,3" offset="0,0,6">
+      <text>
+        <line>That's a rotate handle! Move your hand around outside the piece's cursor to see other handles.</line>
+      </text>
+      <disabled>
+        <feature>drag</feature>
+        <feature>toolbox</feature>
+      </disabled>
+      <goals>
+        <goal type="handle" mincount="3">
+          <pipe coordinate="-1,0,1" />
+        </goal>
+      </goals>
+      <arrows>
+        <arrow coordinate="-1,0,2"/>
+      </arrows>
+    </page>
+    <page coordinate="-1,0,3" offset="0,0,7">
+      <text>
+        <line>Pinch and drag handles to rotate this corner piece until it faces down and to the right.</line>
+      </text>
+      <disabled>
+        <feature>drag</feature>
+        <feature>toolbox</feature>
+      </disabled>
+      <goals>
+        <goal type="place">
+          <pipe type="corner" coordinate="-1,0,1">
+            <connection>bottom</connection>
+            <connection>right</connection>
+          </pipe>
+        </goal>
+      </goals>
+      <arrows>
+        <arrow coordinate="-1,0,2"/>
+      </arrows>
+    </page>
+    <page coordinate="-1,0,3" offset="0,0,5">
+      <text>
+        <line>Now that the corner is facing the correct direction, pick it up.</line>
+      </text>
+      <disabled>
+        <feature>toolbox</feature>
+      </disabled>
+      <goals>
+        <goal type="grab">
+          <pipe coordinate="-1,0,1">
+          </pipe>
+        </goal>
+      </goals>
+      <arrows>
+        <arrow coordinate="-1,0,2"/>
+      </arrows>
+    </page>
+    <page coordinate="-1,0,3" offset="0,0,6">
+      <text>
+        <line>And drop it on top of the straight piece (make sure it still faces down and to the right).</line>
+      </text>
+      <disabled>
+        <feature>toolbox</feature>
+      </disabled>
+      <goals>
+        <goal type="place">
+          <pipe type="corner" coordinate="0,0,1">
+            <connection>bottom</connection>
+            <connection>right</connection>
+          </pipe>
+        </goal>
+      </goals>
+      <arrows>
+        <arrow coordinate="0,0,2"/>
+      </arrows>
+    </page>
+    <page coordinate="-1,0,3" offset="0,0,6">
+      <text>
+        <line>Your toolbox is to the right of the game board. It holds all the pieces you haven't placed. Grab that straight piece.</line>
+      </text>
+      <toolbox>
+        <pipe type="straight"/>
+      </toolbox>
+      <goals>
+        <goal type="grabfromtoolbox" />
+      </goals>
+      <arrows>
+        <arrow />
+      </arrows>
+    </page>
+    <page coordinate="-1,0,3" offset="0,0,6">
+      <text>
+        <line>Place the last piece to complete this pipe.</line>
+      </text>
+      <arrows>
+        <arrow coordinate="0,1,2"/>
+      </arrows>
+    </page>
+  </tutorial>
+  <tutorial level="2" size="3" generate="false">
+    <page coordinate="-1,0,2" offset="0,0,7">
+      <text>
+        <line>Use what you've learned to finish this level.</line>
+        <line>If you leave extra pieces in the toolbox, you might even get a bonus.</line>
+      </text>
+      <pipes>
+        <pipe type="start" class="2" coordinate="0,2,0" fixed="true">
+          <connection>left</connection>
+        </pipe>
+        <pipe type="end" class="2" coordinate="0,-2,1" fixed="true">
+          <connection>right</connection>
+        </pipe>
+        <pipe type="start" class="3" coordinate="0,-2,0" fixed="true">
+          <connection>right</connection>
+        </pipe>
+        <pipe type="end" class="3" coordinate="0,2,-1" fixed="true">
+          <connection>left</connection>
+        </pipe>
+      </pipes>
+      <toolbox>
+        <pipe type="straight"/>
+        <pipe type="straight"/>
+        <pipe type="straight"/>
+        <pipe type="straight"/>
+        <pipe type="straight"/>
+        <pipe type="corner"/>
+        <pipe type="corner"/>
+        <pipe type="corner"/>
+        <pipe type="corner"/>
+      </toolbox>
+      <goals>
+        <goal type="dismiss" />
+      </goals>
+    </page>
+  </tutorial>
+  <tutorial level="3" generate="true">
+    <page coordinate="-1,0,3" offset="0,0,7">
+      <text>
+        <line>That's it for now, but you'll hear more from us later.</line>
+      </text>
+      <goals>
+        <goal type="dismiss" />
+      </goals>
+    </page>
+  </tutorial>
+  <tutorial level="5" generate="true">
+    <page coordinate="-1,0,2" offset="0,0,5">
+      <text>There's a junction in your toolbox! That means one of the pipes will have two ends.</text>
+      <arrows>
+        <arrow />
+      </arrows>
+      <goals>
+        <goal type="dismiss" />
+      </goals>
+    </page>
+  </tutorial>
+  <tutorial level="15" generate="true">
+    <page coordinate="-1,0,3" offset="0,0,5">
+      <text>These metal boxes block your pipes. You'll have to find a way around them to complete the level.</text>
+      <arrows>
+        <arrow coordinate="0,0,2" />
+		  <arrow coordinate="0,0,0" />
+      </arrows>
+      <goals>
+        <goal type="dismiss" />
+      </goals>
+    </page>
+  </tutorial>
+  <tutorial level="25" generate="true" seed="1004">
+    <page coordinate="-1,0,3" offset="0,0,7">
+      <text>A piece of pipe is already locked in place. It must be included in the matching pipe, but you can't move it or rotate it.</text>
+      <arrows>
+        <arrow coordinate="0,0,0" />
+      </arrows>
+      <goals>
+        <goal type="dismiss" />
+      </goals>
+    </page>
+  </tutorial>
+</tutorials>

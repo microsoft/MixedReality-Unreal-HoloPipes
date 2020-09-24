@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SavedGameManager", "SavedGameManager.vcxproj", "{01802069-BC2E-460D-B76B-DA9C39186FBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Desktop = Debug|Desktop
+		Debug|Emulator = Debug|Emulator
+		Debug|HoloLens = Debug|HoloLens
+		Release|Desktop = Release|Desktop
+		Release|Emulator = Release|Emulator
+		Release|HoloLens = Release|HoloLens
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01802069-BC2E-460D-B76B-DA9C39186FBD}.Debug|Desktop.ActiveCfg = Debug|x64
+		{01802069-BC2E-460D-B76B-DA9C39186FBD}.Debug|Desktop.Build.0 = Debug|x64
+		{01802069-BC2E-460D-B76B-DA9C39186FBD}.Debug|Emulator.ActiveCfg = Debug-UWP|x64
+		{01802069-BC2E-460D-B76B-DA9C39186FBD}.Debug|Emulator.Build.0 = Debug-UWP|x64
+		{01802069-BC2E-460D-B76B-DA9C39186FBD}.Debug|HoloLens.ActiveCfg = Debug-UWP|ARM64
+		{01802069-BC2E-460D-B76B-DA9C39186FBD}.Debug|HoloLens.Build.0 = Debug-UWP|ARM64
+		{01802069-BC2E-460D-B76B-DA9C39186FBD}.Release|Desktop.ActiveCfg = Release|x64
+		{01802069-BC2E-460D-B76B-DA9C39186FBD}.Release|Desktop.Build.0 = Release|x64
+		{01802069-BC2E-460D-B76B-DA9C39186FBD}.Release|Emulator.ActiveCfg = Release-UWP|x64
+		{01802069-BC2E-460D-B76B-DA9C39186FBD}.Release|Emulator.Build.0 = Release-UWP|x64
+		{01802069-BC2E-460D-B76B-DA9C39186FBD}.Release|HoloLens.ActiveCfg = Release-UWP|ARM64
+		{01802069-BC2E-460D-B76B-DA9C39186FBD}.Release|HoloLens.Build.0 = Release-UWP|ARM64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3792ABB4-4EE0-4449-9272-DAD32254DE20}
+	EndGlobalSection
+EndGlobal
