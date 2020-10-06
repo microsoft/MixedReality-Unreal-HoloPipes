@@ -12,7 +12,7 @@ Unreal Engine 4.25+ | HoloLens 2
 ## How to run the app
 
 1. Navigate to the **scripts** folder and run the **Build-SGM.ps1** powershell script. Wait until you've received confirmation that all the dependencies have been successfully downloaded. 
-   * HoloPipes uses [WinRT APIs](https://docs.microsoft.com/en-us/windows/mixed-reality/develop/unreal/unreal-winrt) to save the game state (completed levels, stars, etc.) to device. This allows the app to keep track of where you left off. Since Unreal doesn't natively compile WinRT code, this script will automatically pull in the required NuGet libraries and build a separate binary that can be consumed by Unreal's build system. 
+   * HoloPipes uses [WinRT APIs](https://docs.microsoft.com/en-us/windows/mixed-reality/develop/unreal/unreal-winrt) to save the game state (completed levels, stars, etc.) and enable save files to be imported/exported with OneDrive. These save files allow the app to keep track of where you left off. Since Unreal doesn't natively compile WinRT code, this script will automatically pull in the required NuGet libraries and build a separate binary that can be consumed by Unreal's build system. 
 
 
 2. Navigate to the **pipes** folder and open up **HoloPipes.uproject** in Unreal Engine 4.25 or later. 
