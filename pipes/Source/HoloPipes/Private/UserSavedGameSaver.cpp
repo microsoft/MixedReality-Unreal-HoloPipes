@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "UserSavedGameSaver.h"
 
 using namespace winrt::Windows::Storage;
@@ -36,7 +35,7 @@ IFACEMETHODIMP_(void) UserSavedGameSaver::WaitForCompletion()
     }
 }
 
-IAsyncAction UserSavedGameSaver::Start()
+void UserSavedGameSaver::Start()
 {
     bool startSucceeded = false;
 
@@ -79,7 +78,7 @@ IAsyncAction UserSavedGameSaver::Start()
             picker.FileTypeChoices().Insert(description, winrt::single_threaded_vector<winrt::hstring>(std::move(extensions)));
             picker.SuggestedFileName(name);
 
-            m_file = co_await picker.PickSaveFileAsync();
+            m_file = picker.PickSaveFileAsync().get();
 
             if (m_file)
             {
@@ -115,17 +114,17 @@ IAsyncAction UserSavedGameSaver::Start()
 void UserSavedGameSaver::RunThread()
 {
     winrt::init_apartment();
-    Run().get();
+    Run();
 }
 
 
-IAsyncAction UserSavedGameSaver::Run()
+void UserSavedGameSaver::Run()
 {
     SavedGameState result = SavedGameState::Failed;
 
     try
     {
-        co_await FileIO::WriteBytesAsync(m_file, m_bytes);
+        FileIO::WriteBytesAsync(m_file, m_bytes).get();
         result = SavedGameState::Complete;
     }
     catch (...)

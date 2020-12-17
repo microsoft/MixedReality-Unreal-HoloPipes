@@ -19,10 +19,10 @@ public:
 
     IFACEMETHOD_(void, WaitForCompletion)() override;
 
-    winrt::Windows::Foundation::IAsyncAction Start();
+    void Start();
 
     void RunThread();
-    winrt::Windows::Foundation::IAsyncAction Run();
+    void Run();
 
 private:
 

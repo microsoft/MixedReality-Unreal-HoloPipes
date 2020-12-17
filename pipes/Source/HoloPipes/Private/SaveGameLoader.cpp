@@ -57,21 +57,21 @@ void SavedGameLoader::Start()
 void SavedGameLoader::RunThread()
 {
     winrt::init_apartment();
-    Run().get();
+    Run();
 }
 
-IAsyncAction SavedGameLoader::Run()
+void SavedGameLoader::Run()
 {
     SavedGameState result = SavedGameState::Failed;
 
     try
     {
         StorageFolder folder = ResolvePath(m_pathType, false);
-        StorageFile file = co_await folder.GetFileAsync(m_name);
+        StorageFile file = folder.GetFileAsync(m_name).get();
 
         if (file)
         {
-            IBuffer buffer = co_await FileIO::ReadBufferAsync(file);
+            IBuffer buffer = FileIO::ReadBufferAsync(file).get();
             if (buffer)
             {
                 m_bytes.assign(buffer.data(), buffer.data() + buffer.Length());

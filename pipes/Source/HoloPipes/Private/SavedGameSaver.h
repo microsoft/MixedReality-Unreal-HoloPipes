@@ -25,7 +25,7 @@ public:
 
     void Start();
     void RunThread();
-    winrt::Windows::Foundation::IAsyncAction Run();
+    void Run();
 
 private:
 

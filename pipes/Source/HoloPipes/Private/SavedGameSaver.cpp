@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "SavedGameSaver.h"
 
 using namespace winrt::Windows::Storage;
@@ -52,10 +51,10 @@ void SavedGameSaver::Start()
 void SavedGameSaver::RunThread()
 {
     winrt::init_apartment();
-    Run().get();
+    Run();
 }
 
-IAsyncAction SavedGameSaver::Run()
+void SavedGameSaver::Run()
 {
     SavedGameState result = SavedGameState::Failed;
 
@@ -65,14 +64,14 @@ IAsyncAction SavedGameSaver::Run()
 
         StorageFolder tempFolder = ResolvePath(m_pathType, true);
 
-        StorageFile tempFile = co_await tempFolder.CreateFileAsync(tempFileName, CreationCollisionOption::GenerateUniqueName);
+        StorageFile tempFile = tempFolder.CreateFileAsync(tempFileName, CreationCollisionOption::GenerateUniqueName).get();
 
         if (tempFile)
         {
-            co_await FileIO::WriteBytesAsync(tempFile, m_bytes);
+            FileIO::WriteBytesAsync(tempFile, m_bytes).get();
 
             StorageFolder destFolder = ResolvePath(m_pathType, false);
-            co_await tempFile.MoveAsync(destFolder, m_name, NameCollisionOption::ReplaceExisting);
+            tempFile.MoveAsync(destFolder, m_name, NameCollisionOption::ReplaceExisting).get();
             result = SavedGameState::Complete;
         }
     }

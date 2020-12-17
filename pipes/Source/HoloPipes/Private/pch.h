@@ -7,8 +7,16 @@
 #ifndef PCH_H
 #define PCH_H
 
+#pragma warning(disable : 5205 4265 4268 4946)
+
+#include "Windows/AllowWindowsPlatformTypes.h"
+#include "Windows/AllowWindowsPlatformAtomics.h"
+#include "Windows/PreWindowsApi.h"
+
 // add headers that you want to pre-compile here
-#include "framework.h"
+#define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
+// Windows Header Files
+#include <windows.h>
 
 #include "SavedGameManager.h"
 
@@ -19,6 +27,11 @@
 #include <winrt/Windows.Storage.Pickers.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
+
+#include "Windows/PostWindowsApi.h"
+#include "Windows/HideWindowsPlatformAtomics.h"
+#include "Windows/HideWindowsPlatformTypes.h"
+
 
 #include <vector>
 #include <thread>

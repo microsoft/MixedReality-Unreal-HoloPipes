@@ -56,9 +56,6 @@ bool SaveManager::Initialize()
     bool initialized = m_spManager ? true : false;
     if (!initialized)
     {
-        PCWSTR dllPath = SGM_DLL_RELPATH;
-        void* dllHandle = FPlatformProcess::GetDllHandle(dllPath);
-        if (dllHandle)
         {
             initialized = SUCCEEDED(CreateSavedGameManager(m_spManager.ReleaseAndGetAddressOf()));
         }

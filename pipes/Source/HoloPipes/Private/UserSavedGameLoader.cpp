@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "UserSavedGameLoader.h"
 
 using namespace winrt::Windows::Storage;
@@ -40,7 +39,7 @@ IFACEMETHODIMP_(void) UserSavedGameLoader::WaitForCompletion()
     }
 }
 
-IAsyncAction UserSavedGameLoader::Start()
+void UserSavedGameLoader::Start()
 {
     bool startSucceeded = false;
 
@@ -80,7 +79,7 @@ IAsyncAction UserSavedGameLoader::Start()
             picker.FileTypeFilter().Clear();
             picker.FileTypeFilter().Append(extension);
 
-            m_file = co_await picker.PickSingleFileAsync();
+            m_file = picker.PickSingleFileAsync().get();
             
             if (m_file)
             {
@@ -115,16 +114,16 @@ IAsyncAction UserSavedGameLoader::Start()
 void UserSavedGameLoader::RunThread()
 {
     winrt::init_apartment();
-    Run().get();
+    Run();
 }
 
-IAsyncAction UserSavedGameLoader::Run()
+void UserSavedGameLoader::Run()
 {
     SavedGameState result = SavedGameState::Failed;
 
     try
     {
-        IBuffer buffer = co_await FileIO::ReadBufferAsync(m_file);
+        IBuffer buffer = FileIO::ReadBufferAsync(m_file).get();
         if (buffer)
         {
             m_bytes.assign(buffer.data(), buffer.data() + buffer.Length());

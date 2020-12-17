@@ -5,12 +5,6 @@
 
 #include <combaseapi.h>
 
-#ifdef SAVEDGAMEMANAGER_EXPORTS
-    #define SGM_API __declspec(dllexport)
-#else
-    #define SGM_API __declspec(dllimport)
-#endif
-
 
 enum class SavedGamePathType : UINT32
 {
@@ -69,4 +63,4 @@ DECLARE_INTERFACE_IID_(ISavedGameManager, IUnknown, "60614B82-7BF9-4C1B-A77C-B3A
                         _COM_Outptr_ ISavedGame** ppSavedGame) PURE;
 };
 
-SGM_API HRESULT CreateSavedGameManager(_COM_Outptr_ ISavedGameManager** ppManager);
+HRESULT CreateSavedGameManager(_COM_Outptr_ ISavedGameManager** ppManager);
