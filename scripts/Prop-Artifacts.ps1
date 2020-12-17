@@ -54,5 +54,4 @@ Prop-Directory -Src "Saved\Logs" "Logs"
 Prop-Directory -Src "Build\HoloLens" "Build"
 Prop-Directory -Src "Binaries\HoloLens" "Binaries"
 Prop-Directory -Src "Config" "Config"
-Prop-Directory -Src "ThirdParty\SavedGameManager\bin\HoloLens" "SavedGameManager"
 

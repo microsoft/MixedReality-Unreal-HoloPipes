@@ -4,18 +4,14 @@ Play the classic pipes puzzle game, taken to another dimension! HoloPipes is an 
 
 Supported Unreal versions | Supported device
 :-----------------: | :----------------:
-Unreal Engine 4.25+ | HoloLens 2
+Unreal Engine 4.26+ | HoloLens 2
 
 
 ![Placing a pipe in the puzzle](docs/PlacePipe.png)
 
 ## How to run the app
 
-1. Navigate to the **scripts** folder and run the **Build-SGM.ps1** powershell script. Wait until you've received confirmation that all the dependencies have been successfully downloaded. 
-   * HoloPipes uses [WinRT APIs](https://docs.microsoft.com/en-us/windows/mixed-reality/develop/unreal/unreal-winrt) to save the game state (completed levels, stars, etc.) and enable save files to be imported/exported with OneDrive. These save files allow the app to keep track of where you left off. Since Unreal doesn't natively compile WinRT code, this script will automatically pull in the required NuGet libraries and build a separate binary that can be consumed by Unreal's build system. 
-
-
-2. Navigate to the **pipes** folder and open up **HoloPipes.uproject** in Unreal Engine 4.25 or later. 
+Navigate to the **pipes** folder and open up **HoloPipes.uproject** in Unreal Engine 4.26 or later. 
 
    * To stream the experience from a PC to a HoloLens 2 headset, follow the instructions for [streaming in Unreal](https://docs.microsoft.com/en-us/windows/mixed-reality/unreal-streaming).
 
